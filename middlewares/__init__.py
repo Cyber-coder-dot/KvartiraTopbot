@@ -1,8 +1,9 @@
 from aiogram import Dispatcher
-from . import must_sub
+from . must_sub import CheckChannel
 from loader import dp
 from .throttling import ThrottlingMiddleware
 
 
 if __name__ == "middlewares":
     dp.middleware.setup(ThrottlingMiddleware())
+    dp.middleware.setup(CheckChannel())

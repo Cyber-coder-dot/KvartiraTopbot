@@ -4,6 +4,6 @@ from . import xaridor_handler
 from . import region_handler
 from . import tuman_handler
 from . import sotuvchi_handler
-from . import sotuvchi_malumot
+from . import anketa_handler
 from . import elonlar_handler
 from . import echo
