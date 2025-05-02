@@ -17,7 +17,7 @@ async def bot_start(message: types.Message):
     except asyncpg.exceptions.UniqueViolationError:
         user=await db.select_user(telegram_id=telegram_id)
 
-    await message.answer(f"Salom, {message.from_user.full_name}!",reply_markup=sign_up)
+    await message.answer(f"Salom qadrli mijoz , {message.from_user.full_name}!",reply_markup=sign_up)
     msg = "Yangi foydalanuvchi qoshildi\n"
     msg += f"Full_name: {user[1]}\n"
     await bot.send_message(ADMINS[0], msg)
